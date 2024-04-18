@@ -1,0 +1,12 @@
+.cur{
+    cursor: pointer;
+}
+.card{
+    border: 1px solid black !important;
+    padding: 10px !important;
+}
+.card-title{
+    background-color: #e01052 !important;
+    height: 50px !important;
+    padding: 10px;
+}

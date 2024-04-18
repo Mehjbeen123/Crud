@@ -1,0 +1,21 @@
+{
+    "data":[
+       {
+        "fname":"Mehjbeen",
+        "lname":"tamboli",
+        "email":"m@gmail.com",
+        "dob":"20-06-1993",
+        "avatar":"",
+        "con":"India"
+       },
+       {
+        "fname":"Kais",
+        "lname":"Shaikh",
+        "email":"k@gmail.com",
+        "dob":"20-06-2000",
+        "avatar":"",
+        "con":"Chin"
+       }
+
+    ]
+}

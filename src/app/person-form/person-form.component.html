@@ -1,0 +1,75 @@
+<div class="container text-center" >
+  <div class="" >
+    
+    <form class="max-width mx-auto bborder my-5" [formGroup]="myform" (ngSubmit)="onSumbit()" >
+      <h1 class="text-center my-5">Please fill the form to add the person</h1>
+          <div class="row g-2 mt-3">
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="name@example.com" formControlName="fname"
+                  [ngClass]="{'is-invalid':isSubmit && myform.controls.fname.errors}">
+                  <label for="floatingInputGrid">First Name</label>
+                  <div class="invalid-feedback" *ngIf="isSubmit && myform.controls.fname.touched">
+                    <i>Please Enter Your First Name</i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md mb-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" formControlName="lname" placeholder="last name" 
+                  [ngClass]="{'is-invalid':isSubmit && myform.controls.lname.errors}">
+                  <label for="floatingInputGrid">Last Name</label>
+                  <div class="invalid-feedback" *ngIf="isSubmit && myform.controls.lname.touched">
+                    <i>Please Enter Your last Name</i>
+                  </div>
+                </div>
+              </div>
+          </div>
+          
+          <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput1" placeholder="name@example.com" formControlName="email"
+              [ngClass]="{'is-invalid':isSubmit && myform.controls.email.errors}">
+              <label for="floatingInput1">Email address</label>
+              <div class="invalid-feedback" *ngIf="isSubmit && myform.controls.email.touched">
+                <div *ngIf="isSubmit && myform.controls.email.errors?.required"><i>Please Enter Your Email Id</i></div>
+                <div *ngIf="isSubmit && myform.controls.email.errors?.pattern"><i>Please Enter Valid Email Id</i></div>
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+              <input type="file" class="form-control" id="floatingPassword1" placeholder="avatar" formControlName="avatar" (change)="onFileSelected($event)" accept="image/*"
+              [ngClass]="{'is-invalid':isSubmit && myform.controls.avatar.errors}">
+              <label for="floatingPassword1">avatar</label>
+              <div class="invalid-feedback" *ngIf="isSubmit && myform.controls.avatar.touched">
+                <i>Please select your avatar</i>
+              </div>
+          </div>
+          <div class="row g-2">
+              <div class="col-md form-floating">
+                <input type="date" class="form-control" id="floatingSelectGrid" placeholder="name@example.com" formControlName="dob"
+                [ngClass]="{'is-invalid':isSubmit && myform.controls.dob.errors}">
+                <label for="floatingSelectGrid">dob</label>
+                <div class="invalid-feedback" *ngIf="isSubmit && myform.controls.dob.touched">
+                  <i>Please Enter Your date of birth</i>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-floating">
+                  <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" formControlName="con"
+                  [ngClass]="{'is-invalid':isSubmit && myform.controls.con.errors}" >
+                      
+                      <option *ngFor="let i of con" >{{i}}</option>
+                  </select>
+                  <label for="floatingSelectGrid">Select Country</label>
+                  <div class="invalid-feedback" *ngIf="isSubmit && myform.controls.con.touched">
+                    <i>Please select country</i>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            <button type="submit" class="btn  btn-lg my-5 buttn" *ngIf="!isupdate">Submit</button>
+            <button type="button" class="btn btn-lg my-5 buttn" *ngIf="isupdate" (click)="onEdit()">Update</button>
+    </form>
+  </div>
+    
+</div>

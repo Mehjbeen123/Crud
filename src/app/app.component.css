@@ -1,0 +1,38 @@
+.navbar{
+    height: 80px !important;
+    /* background-color: #07e089 !important; */
+    
+}
+.navbar-brand{
+    font-size: 35px !important;
+    font-weight: 600 !important;
+    margin-right: 300px !important;
+    margin-left: 70px;
+}
+.nav-link{
+    font-size: 25px !important;
+    margin-left: 10px;
+   
+}
+.navbar-nav{
+    margin-left: 230px !important;
+   
+}
+.form-control{
+    width: 430px !important;
+    padding-right: 90px !important; 
+}
+
+
+.btn {
+    top: 0;
+    right: 0;
+    margin: 0;
+    background-color:white !important;
+}
+.astyle{
+    background-color: #e01052 ;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
